@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.commands.DriveCommand;
+import frc.robot.commands.instant.ExampleButtonCommand;
 import frc.robot.subsystems.Drivetrain;
 
 /**
@@ -38,6 +39,9 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
+    // Make the ExampleButtonCommand run each time the example button is pressed
+    OI.exampleButton.whenPressed(new ExampleButtonCommand());
+    
     // TODO: Add your button bindings here    
   }
 
