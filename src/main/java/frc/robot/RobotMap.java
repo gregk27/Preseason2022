@@ -43,12 +43,12 @@ public class RobotMap {
         /** CAN ID of left talon 1. */
         private static final int LEFT_CONTROLLER_1 = 0;
         /** CAN ID of left talon 2. */
-        private static final int LEFT_CONTROLLER_2 = 0;
+        private static final int LEFT_CONTROLLER_2 = 1;
         
         /** CAN ID of right talon 1. */
-        private static final int RIGHT_CONTROLLER_1 = 0;
+        private static final int RIGHT_CONTROLLER_1 = 2;
         /** CAN ID of right talon 2. */
-        private static final int RIGHT_CONTROLLER_2 = 0;
+        private static final int RIGHT_CONTROLLER_2 = 3;
     }
 
     // We use the WPILib wrappers to get simulation support
