@@ -15,9 +15,9 @@ public class OI {
     /** Driver Station ports controllers are attached to */
     private static class Ports {
         /** Left driving joystick */
-        private static final int LEFT_STICK = 0;
+        //private static final int LEFT_STICK = 0;
         /** Right driving joystick */
-        private static final int RIGHT_STICK = 1;
+        //private static final int RIGHT_STICK = 1;
         /** Driving controller */
         private static final int DRIVER_CONTROLLER = 2;
         
@@ -33,7 +33,8 @@ public class OI {
     /** Buttons on the operator controller */
     private static class OperatorButtons {
         /** Button used as example */
-        private static final Button EXAMPLE = XboxController.Button.kA;
+        private static final Button shoot = XboxController.Button.kY;
+        private static final Button feed = XboxController.Button.kX;
     }
 
     // This contains objects for both joystick and controller driving
@@ -43,9 +44,9 @@ public class OI {
     // Use buttons and DoubleSuppliers to expose any inputs you want elsewhere
 
     /** Joystick used to control left side of drivetrain */
-    private static final Joystick leftJoystick = new Joystick(Ports.LEFT_STICK);
+    //private static final Joystick leftJoystick = new Joystick(Ports.LEFT_STICK);
     /** Joystick used to control right side of drivetrain */
-    private static final Joystick rightJoystick = new Joystick(Ports.RIGHT_STICK);
+    //private static final Joystick rightJoystick = new Joystick(Ports.RIGHT_STICK);
     /** Controller used to control drivetrain */
     private static final XboxController driverController = new XboxController(Ports.DRIVER_CONTROLLER);
 
@@ -53,7 +54,8 @@ public class OI {
     private static final XboxController operatorController = new XboxController(Ports.OPERATOR_CONTROLLER);
 
     /** Button used as example */
-    public static final JoystickButton exampleButton = new JoystickButton(operatorController, OperatorButtons.EXAMPLE.value);
+    public static final JoystickButton shootButton = new JoystickButton(operatorController, OperatorButtons.shoot.value);
+    public static final JoystickButton feedButton = new JoystickButton(operatorController, OperatorButtons.feed.value);
 
 
     // Suppliers for drive inputs

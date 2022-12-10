@@ -4,18 +4,20 @@
 
 package frc.robot.subsystems;
 
+import edu.wpi.first.wpilibj2.command.SubsystemBase;
+
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
-import edu.wpi.first.wpilibj2.command.SubsystemBase;
+public class Feeder extends SubsystemBase {
+  /** Creates a new Feeder. */
+  public Feeder() {}
 
-public class Shooter extends SubsystemBase {
-
-  private TalonSRX shooterMotor;
+  private TalonSRX feederMotor;
 
   /** Creates a new Shooter. */
-  public Shooter(TalonSRX shooterMotor) {
-    this.shooterMotor = shooterMotor;
+  public Feeder(TalonSRX feederMotor) {
+    this.feederMotor = feederMotor;
   }
 
   @Override
@@ -27,22 +29,14 @@ public class Shooter extends SubsystemBase {
    * sets shooter speed in range of 0.0 to 1.0
    * @param speed
    */
-  public void setShooterSpeed(double speed){
-    this.shooterMotor.set(ControlMode.PercentOutput, speed);
-  }
-
-    /**
-   * sets shooter speed to constant idle speed value
-   * @param idle
-   */
-  public void idleShooter(double idle){
-    this.shooterMotor.set(ControlMode.PercentOutput, idle);
+  public void setFeederSpeed(double speed){
+    this.feederMotor.set(ControlMode.PercentOutput, speed);
   }
 
   /**
    * stop shooter motor (set motor speed to 0)
    */
-  public void stopShooter(){
-    this.shooterMotor.set(ControlMode.PercentOutput, 0);
+  public void stopFeeder(){
+    this.feederMotor.set(ControlMode.PercentOutput, 0);
   }
 }
