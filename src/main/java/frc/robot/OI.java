@@ -66,7 +66,7 @@ public class OI {
         double raw = 0;
         // TODO: Uncomment control type you prefer
         // raw = leftJoystick.getY();
-        // raw = driverController.getLeftY();
+        raw = driverController.getLeftY();
         return processDriveInput(raw);
     };
 
@@ -79,7 +79,7 @@ public class OI {
         double raw = 0;
         // TODO: Uncomment control type you prefer
         // raw = rightJoystick.getY();
-        // raw = driverController.getRightY();
+        raw = driverController.getRightY();
         return processDriveInput(raw);
     };
 
@@ -91,7 +91,7 @@ public class OI {
      */
     private static double processDriveInput(double raw){
         // TODO: Configure input processing to suit your liking
-        // if(Math.abs(raw) < [DEADZONE]) raw = 0;
+        if(Math.abs(raw) < 0.1) raw = 0;
         // raw = Math.pow(raw, [EXPONENT]);
         // raw *= [INPUT_SCALING];
         return raw;
