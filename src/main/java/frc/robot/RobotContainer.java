@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.commands.DriveCommand;
+import frc.robot.commands.TestMotorCommand;
 import frc.robot.commands.instant.ExampleButtonCommand;
 import frc.robot.subsystems.Drivetrain;
 
@@ -42,6 +43,10 @@ public class RobotContainer {
     // Make the ExampleButtonCommand run each time the example button is pressed
     OI.exampleButton.whenPressed(new ExampleButtonCommand());
     
+    OI.motor1Button.whileHeld(new TestMotorCommand(RobotMap.topTalon1));
+    OI.motor2Button.whileHeld(new TestMotorCommand(RobotMap.topTalon2));
+    OI.motor3Button.whileHeld(new TestMotorCommand(RobotMap.topTalon3));
+
     // TODO: Add your button bindings here    
   }
 

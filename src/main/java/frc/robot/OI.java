@@ -27,13 +27,15 @@ public class OI {
 
     /** Buttons on the driver sticks/controller */
     private static class DriverButtons {
-        
+        private static final Button MOTOR_1 = XboxController.Button.kY;
+        private static final Button MOTOR_2 = XboxController.Button.kB;
+        private static final Button MOTOR_3 = XboxController.Button.kA;
     }
 
     /** Buttons on the operator controller */
     private static class OperatorButtons {
         /** Button used as example */
-        private static final Button EXAMPLE = XboxController.Button.kA;
+        private static final Button EXAMPLE = XboxController.Button.kX;
     }
 
     // This contains objects for both joystick and controller driving
@@ -55,6 +57,9 @@ public class OI {
     /** Button used as example */
     public static final JoystickButton exampleButton = new JoystickButton(operatorController, OperatorButtons.EXAMPLE.value);
 
+    public static final JoystickButton motor1Button = new JoystickButton(driverController, DriverButtons.MOTOR_1.value);
+    public static final JoystickButton motor2Button = new JoystickButton(driverController, DriverButtons.MOTOR_2.value);
+    public static final JoystickButton motor3Button = new JoystickButton(driverController, DriverButtons.MOTOR_3.value);
 
     // Suppliers for drive inputs
 
