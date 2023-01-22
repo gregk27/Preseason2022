@@ -4,6 +4,7 @@
 
 package frc.robot.subsystems;
 
+import edu.wpi.first.networktables.GenericEntry;
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
@@ -23,22 +24,22 @@ public class Limelight extends SubsystemBase {
   private NetworkTable m_table;
   
   // subsystem shuffleboard controls
-  private NetworkTableEntry m_Pipeline;
-  private NetworkTableEntry m_TargetPresent;
-  private NetworkTableEntry m_AngleX;
-  private NetworkTableEntry m_AngleY;
-  private NetworkTableEntry m_Skew;
-  private NetworkTableEntry m_Area;
-  private NetworkTableEntry m_Short;
-  private NetworkTableEntry m_Long;
-  private NetworkTableEntry m_Hor;
-  private NetworkTableEntry m_Vert;
-  private NetworkTableEntry m_X;
-  private NetworkTableEntry m_Y;
-  private NetworkTableEntry m_Z;
-  private NetworkTableEntry m_Pitch;
-  private NetworkTableEntry m_Yaw;
-  private NetworkTableEntry m_Roll;
+  private GenericEntry m_Pipeline;
+  private GenericEntry m_TargetPresent;
+  private GenericEntry m_AngleX;
+  private GenericEntry m_AngleY;
+  private GenericEntry m_Skew;
+  private GenericEntry m_Area;
+  private GenericEntry m_Short;
+  private GenericEntry m_Long;
+  private GenericEntry m_Hor;
+  private GenericEntry m_Vert;
+  private GenericEntry m_X;
+  private GenericEntry m_Y;
+  private GenericEntry m_Z;
+  private GenericEntry m_Pitch;
+  private GenericEntry m_Yaw;
+  private GenericEntry m_Roll;
 
 
   /**
