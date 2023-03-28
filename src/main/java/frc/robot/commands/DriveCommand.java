@@ -49,8 +49,15 @@ public class DriveCommand extends CommandBase  {
 	 */
 	@Override
 	public void execute() {
-		// Get values from the provided double suppliers
-		drivetrain.setOutput(leftSupplier.getAsDouble(), rightSupplier.getAsDouble());
+		// drive with what ever i want
+		final double speed = leftSupplier.getAsDouble() * 4;
+		final double radians = Math.toRadians(360 * rightSupplier.getAsDouble());
+		
+		// Uncomment for tank drive
+		//drivetrain.setOutput(leftSupplier.getAsDouble(), rightSupplier.getAsDouble());
+
+		// Arcade drive (comment for tank drive)
+		drivetrain.arcadeDrive(speed, radians);
 	}
 
 	/**
