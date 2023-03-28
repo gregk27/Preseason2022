@@ -53,11 +53,11 @@ public class DriveCommand extends CommandBase  {
 		final double speed = leftSupplier.getAsDouble() * 4;
 		final double radians = Math.toRadians(360 * rightSupplier.getAsDouble());
 		
-		// Uncomment for tank drive
-		//drivetrain.setOutput(leftSupplier.getAsDouble(), rightSupplier.getAsDouble());
+		// comment for arcade drive
+		drivetrain.setOutput(leftSupplier.getAsDouble(), rightSupplier.getAsDouble());
 
-		// Arcade drive (comment for tank drive)
-		drivetrain.arcadeDrive(speed, radians);
+		// uncomment for arcade drive 
+		// drivetrain.arcadeDrive(speed, radians);
 	}
 
 	/**
